@@ -58,14 +58,7 @@
 
     <section class="section" style="padding-top:0.5rem" aria-label="Contactformulier en contactgegevens">
       <div class="container contact-layout">
-
-        <!-- INTEGRATIE-PLACEHOLDER
-             Dit formulier verstuurt pas berichten als het is gekoppeld aan een formulierdienst
-             of eigen back-end. Vervang JOUW-FORMULIER-ID in het action-adres hieronder.
-             Opties: Formspree, Web3Forms, Netlify Forms, of een eigen PHP-script bij je hosting.
-             Bestandsupload werkt alleen als de gekozen dienst uploads ondersteunt.
-             Zie VOORSTEL.md, onderdeel "Contactformulier". -->
-        <form class="form" id="contactformulier" action="https://formspree.io/f/JOUW-FORMULIER-ID" method="post" enctype="multipart/form-data" novalidate>
+        <form class="form" id="contactformulier" action="verzend.php" method="post" enctype="multipart/form-data" novalidate>
           <h2>Plaats je idee</h2>
           <p class="hint">Velden zonder “optioneel” zijn nodig om je goed te kunnen helpen.</p>
 
@@ -229,6 +222,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261018" defer></script>
+  <script src="js/main.js?v=20261018b" defer></script>
 </body>
 </html>

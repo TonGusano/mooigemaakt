@@ -108,6 +108,12 @@
       status.textContent = text;
     };
 
+    if (/[?&]verzonden=1/.test(location.search)) {
+      showStatus('ok', 'Bedankt voor je bericht. Ik lees het rustig door en neem contact met je op.');
+    } else if (/[?&]fout=1/.test(location.search)) {
+      showStatus('error', 'Het versturen is niet gelukt. Probeer het later opnieuw of stuur een e-mail.');
+    }
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var firstInvalid = null;
@@ -122,13 +128,6 @@
         return;
       }
 
-      /* INTEGRATIE-PLACEHOLDER: zolang het formulieradres niet is ingevuld,
-         wordt er niets verstuurd. Zie VOORSTEL.md, onderdeel "Contactformulier". */
-      if (form.action.indexOf('JOUW-FORMULIER-ID') !== -1) {
-        showStatus('info', 'Het formulier is nog niet gekoppeld aan een e-maildienst. Je bericht is daarom niet verstuurd.');
-        return;
-      }
-
       var button = form.querySelector('[type="submit"]');
       button.disabled = true;
       showStatus('info', 'Je bericht wordt verstuurd…');
@@ -137,11 +136,14 @@
         body: new FormData(form),
         headers: { Accept: 'application/json' }
       }).then(function (response) {
-        if (!response.ok) throw new Error('Versturen mislukt');
+        return response.json().catch(function () { return {}; }).then(function (data) {
+          if (!response.ok || !data.ok) throw new Error(data.melding || '');
+        });
+      }).then(function () {
         form.reset();
         showStatus('ok', 'Bedankt voor je bericht. Ik lees het rustig door en neem contact met je op.');
-      }).catch(function () {
-        showStatus('error', 'Het versturen is niet gelukt. Probeer het later opnieuw of stuur een e-mail.');
+      }).catch(function (err) {
+        showStatus('error', (err && err.message) || 'Het versturen is niet gelukt. Probeer het later opnieuw of stuur een e-mail.');
       }).then(function () {
         button.disabled = false;
       });
