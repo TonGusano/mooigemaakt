@@ -1,0 +1,19 @@
+# Alleen de sitebestanden gaan online. Alles wat hier niet met ! staat, blijft lokaal
+# (zoals Logo.af, video's, Word- en PowerPointbestanden en VOORSTEL.md).
+/*
+!/.gitignore
+!/*.html
+!/robots.txt
+!/sitemap.xml
+!/css/
+!/js/
+!/images/
+/images/*
+!/images/Collagemedia.png
+!/images/Mei ' 26 ECKU Nieuwsbrief 2.pdf
+!/images/Ton achter bureau.png
+!/images/Werkruimte.png
+!/images/ecku-nieuwsbrief-mei-voorblad.jpg
+!/images/favicon.svg
+!/images/logo-cirkel.png
+!/images/wijnetiket-marcheur-incline.webp

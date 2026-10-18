@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mooigemaakt.net/sitemap.xml

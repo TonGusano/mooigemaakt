@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact: vertel wat je wilt laten maken – MooiGemaakt</title>
+  <meta name="description" content="Heb je een idee, vraag of voorbeeld? Stuur een bericht aan MooiGemaakt. Een uitgewerkt plan is niet nodig.">
+  <link rel="canonical" href="https://mooigemaakt.net/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="MooiGemaakt">
+  <meta property="og:title" content="Contact: vertel wat je wilt laten maken – MooiGemaakt">
+  <meta property="og:description" content="Heb je een idee, vraag of voorbeeld? Stuur een bericht aan MooiGemaakt. Een uitgewerkt plan is niet nodig.">
+  <meta property="og:url" content="https://mooigemaakt.net/contact.html">
+  <!-- PLACEHOLDER: eigen deelafbeelding van 1200 x 630 pixels -->
+  <meta property="og:image" content="https://mooigemaakt.net/images/og-afbeelding.jpg">
+  <meta name="theme-color" content="#14484f">
+  <!-- PLACEHOLDER: eigen favicon -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#inhoud">Direct naar de inhoud</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="MooiGemaakt, naar de homepage">
+        <img class="logo-img" src="images/logo-cirkel.png" alt="MooiGemaakt" width="600" height="600">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hoofdmenu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>Menu
+      </button>
+      <nav id="hoofdmenu" class="main-nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="diensten.html">Wat ik maak</a></li>
+          <li><a href="zo-werkt-het.html">Zo werkt het</a></li>
+          <li><a href="portfolio.html">Voorbeelden</a></li>
+          <li><a href="over.html">Over</a></li>
+          <li><a href="faq.html">Vragen</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary btn-small" href="contact.html">Plaats je idee</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhoud">
+    <section class="page-hero">
+      <div class="container container--narrow" style="margin-left:auto;margin-right:auto">
+        <span class="eyebrow">Contact</span>
+        <h1>Vertel wat je wilt laten maken</h1>
+        <p class="lead">Vertel gerust wat je wilt maken. Een uitgewerkt plan is niet nodig; een idee, voorbeeld, schets of losse vraag is al genoeg.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0.5rem" aria-label="Contactformulier en contactgegevens">
+      <div class="container contact-layout">
+
+        <!-- INTEGRATIE-PLACEHOLDER
+             Dit formulier verstuurt pas berichten als het is gekoppeld aan een formulierdienst
+             of eigen back-end. Vervang JOUW-FORMULIER-ID in het action-adres hieronder.
+             Opties: Formspree, Web3Forms, Netlify Forms, of een eigen PHP-script bij je hosting.
+             Bestandsupload werkt alleen als de gekozen dienst uploads ondersteunt.
+             Zie VOORSTEL.md, onderdeel "Contactformulier". -->
+        <form class="form" id="contactformulier" action="https://formspree.io/f/JOUW-FORMULIER-ID" method="post" enctype="multipart/form-data" novalidate>
+          <h2>Plaats je idee</h2>
+          <p class="hint">Velden zonder “optioneel” zijn nodig om je goed te kunnen helpen.</p>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="naam">Naam</label>
+              <input type="text" id="naam" name="naam" autocomplete="name" required aria-describedby="fout-naam">
+              <span class="error" id="fout-naam" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="organisatie">Bedrijfsnaam of organisatie <span class="optional">(optioneel)</span></label>
+              <input type="text" id="organisatie" name="organisatie" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="email">E-mailadres</label>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="fout-email">
+              <span class="error" id="fout-email" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="telefoon">Telefoonnummer <span class="optional">(optioneel)</span></label>
+              <input type="tel" id="telefoon" name="telefoon" autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="onderwerp">Waar gaat je vraag over?</label>
+            <select id="onderwerp" name="onderwerp" required aria-describedby="fout-onderwerp">
+              <option value="">Maak een keuze</option>
+              <option>Website</option>
+              <option>Foto</option>
+              <option>Video</option>
+              <option>Social media</option>
+              <option>Vormgeving / drukwerk</option>
+              <option>Presentatie / fotogalerij</option>
+              <option>Anders</option>
+            </select>
+            <span class="error" id="fout-onderwerp" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="bericht">Vertel kort wat je wilt laten maken</label>
+            <span class="hint" id="hint-bericht">Een paar zinnen is genoeg. Wat heb je voor ogen en waar wil je het voor gebruiken?</span>
+            <textarea id="bericht" name="bericht" required aria-describedby="hint-bericht fout-bericht"></textarea>
+            <span class="error" id="fout-bericht" role="alert"></span>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="voorwie">Voor wie is het bedoeld?</label>
+              <span class="hint" id="hint-voorwie">Bijvoorbeeld je bedrijf, vereniging of familie.</span>
+              <input type="text" id="voorwie" name="voorwie" required aria-describedby="hint-voorwie fout-voorwie">
+              <span class="error" id="fout-voorwie" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="datum">Gewenste opleverdatum <span class="optional">(optioneel)</span></label>
+              <span class="hint" id="hint-datum">Een richtdatum; we stemmen de planning samen af.</span>
+              <input type="date" id="datum" name="opleverdatum" aria-describedby="hint-datum">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="materiaal">Heb je al materiaal? <span class="optional">(optioneel)</span></label>
+            <span class="hint" id="hint-materiaal">Denk aan foto’s, tekst, een logo, video of voorbeelden die je mooi vindt.</span>
+            <textarea id="materiaal" name="materiaal" style="min-height:5rem" aria-describedby="hint-materiaal"></textarea>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="bestand">Bestand meesturen <span class="optional">(optioneel)</span></label>
+              <input type="file" id="bestand" name="bestand">
+            </div>
+            <div class="field">
+              <label for="link">Of een link naar je materiaal <span class="optional">(optioneel)</span></label>
+              <input type="url" id="link" name="link" placeholder="https://">
+            </div>
+          </div>
+
+          <fieldset class="field">
+            <legend>Hoe wil je het liefst contact?</legend>
+            <div class="choice-row">
+              <label class="choice"><input type="radio" name="contactvoorkeur" value="E-mail" required> E-mail</label>
+              <label class="choice"><input type="radio" name="contactvoorkeur" value="Telefoon"> Telefoon</label>
+              <label class="choice"><input type="radio" name="contactvoorkeur" value="WhatsApp"> WhatsApp</label>
+            </div>
+            <span class="error" id="fout-contactvoorkeur" role="alert"></span>
+          </fieldset>
+
+          <div class="field">
+            <label class="choice" for="toestemming">
+              <input type="checkbox" id="toestemming" name="toestemming" value="ja" required aria-describedby="fout-toestemming">
+              <span>Ik ga ermee akkoord dat MooiGemaakt mijn gegevens gebruikt om contact met mij op te nemen over deze aanvraag. Lees meer in <a href="privacy.html">Privacy en afspraken</a>.</span>
+            </label>
+            <span class="error" id="fout-toestemming" role="alert"></span>
+          </div>
+
+          <!-- Spamval: dit veld blijft leeg bij echte bezoekers -->
+          <div class="hp" aria-hidden="true">
+            <label for="website-veld">Laat dit veld leeg</label>
+            <input type="text" id="website-veld" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="btn btn-primary" type="submit">Verstuur je idee</button>
+          <div id="formulier-status" class="form-status" role="status" aria-live="polite"></div>
+          <p class="hint" style="margin-top:1.2rem;margin-bottom:0">Je bericht is geen definitieve opdracht. Eerst kijken we samen wat mogelijk en passend is.</p>
+        </form>
+
+        <aside aria-labelledby="gegevens-titel">
+          <div class="card card--plain">
+            <h2 id="gegevens-titel" style="font-size:1.4rem">Liever direct contact?</h2>
+            <!-- PLACEHOLDERS: contactgegevens invullen -->
+            <ul class="contact-list">
+              <li><svg class="icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span><strong>E-mailadres</strong><a href="mailto:smask2018@gmail.com">smask2018@gmail.com</a></span></li>
+              <li><svg class="icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></svg><span><strong>Telefoon / WhatsApp</strong><a href="tel:+31646260952">06 46 26 09 52</a></span></li>
+              <li><svg class="icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.500-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg><span><strong>Werkgebied</strong><span class="ph">[later invullen, bijvoorbeeld Amstelveen, Amsterdam en online]</span></span></li>
+              <li><svg class="icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 0 0 5.700 0l3-3a4 4 0 0 0-5.700-5.700l-1 1M14 10a4 4 0 0 0-5.700 0l-3 3a4 4 0 0 0 5.700 5.700l1-1"/></svg><span><strong>Instagram / Facebook / LinkedIn</strong><span class="ph">[later invullen]</span></span></li>
+            </ul>
+          </div>
+          <div class="note note--moss">
+            <p><strong>Wat gebeurt er daarna?</strong> Ik lees je bericht rustig door en neem contact met je op via de manier die jij hebt gekozen. Daarna bespreken we wat mogelijk is.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">MooiGemaakt</p>
+          <p>Jouw idee, mooi gemaakt.</p>
+          <p>Een kleinschalige, persoonlijke creatieve service voor particulieren, kleine bedrijven, verenigingen en lokale initiatieven.</p>
+        </div>
+        <div>
+          <h2>Pagina’s</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="diensten.html">Wat ik maak</a></li>
+            <li><a href="zo-werkt-het.html">Zo werkt het</a></li>
+            <li><a href="portfolio.html">Voorbeelden</a></li>
+            <li><a href="over.html">Over MooiGemaakt</a></li>
+            <li><a href="faq.html">Veelgestelde vragen</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <!-- PLACEHOLDERS: contactgegevens en sociale links invullen -->
+          <ul>
+            <li>E-mail: <a href="mailto:smask2018@gmail.com">smask2018@gmail.com</a></li>
+            <li>Telefoon/WhatsApp: <a href="tel:+31646260952">06 46 26 09 52</a></li>
+            <li>Werkgebied: <span class="ph">[later invullen]</span></li>
+            <li>Social media: <span class="ph">[later invullen]</span></li>
+          </ul>
+          <p style="margin-top:1rem"><a href="contact.html">Vertel wat je wilt laten maken</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="jaar">2026</span> MooiGemaakt</p>
+        <p><a href="privacy.html">Privacy en afspraken</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
