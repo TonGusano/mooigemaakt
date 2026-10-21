@@ -735,3 +735,7 @@ img, svg { max-width: 100%; height: auto; }
 @media (min-width: 700px) {
   .intro-logo { width: 7rem; }
 }
+
+/* Foto van Ton in de hero, collage op de Over-pagina */
+.hero-art .photo { max-width: 520px; mix-blend-mode: normal; box-shadow: var(--shadow); }
+.collage { display: block; width: 100%; max-width: 472px; height: auto; margin-inline: auto; mix-blend-mode: multiply; }
