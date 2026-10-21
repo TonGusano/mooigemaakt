@@ -739,3 +739,9 @@ img, svg { max-width: 100%; height: auto; }
 /* Foto van Ton in de hero, collage op de Over-pagina */
 .hero-art .photo { max-width: 520px; mix-blend-mode: normal; box-shadow: var(--shadow); }
 .collage { display: block; width: 100%; max-width: 472px; height: auto; margin-inline: auto; mix-blend-mode: multiply; }
+
+/* Portret van Ton bij "Waar ik ervaring mee heb" (blijft kleiner dan het logo in de header) */
+.intro-portret { width: 6rem; }
+@media (min-width: 700px) {
+  .intro-portret { width: 9rem; }
+}
