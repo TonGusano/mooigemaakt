@@ -745,3 +745,7 @@ img, svg { max-width: 100%; height: auto; }
 @media (min-width: 700px) {
   .intro-portret { width: 9rem; }
 }
+
+/* Pagina Afscheid in beeld */
+.afscheid-portret { display: block; width: 100%; max-width: 260px; height: auto; margin-inline: auto; }
+.afscheid-teaser .afscheid-portret { max-width: 200px; }
