@@ -235,7 +235,7 @@ img, svg { max-width: 100%; height: auto; }
 .nav-toggle-bars::before { position: absolute; top: -6px; }
 .nav-toggle-bars::after { position: absolute; top: 6px; }
 
-@media (max-width: 1270px) {
+@media (max-width: 960px) {
   .js .nav-toggle { display: inline-flex; }
   .js .main-nav { display: none; }
   .js .main-nav.is-open { display: flex; }
@@ -726,7 +726,7 @@ img, svg { max-width: 100%; height: auto; }
 .main-nav ul a:hover { background: rgba(255, 255, 255, 0.12); color: var(--white); }
 .main-nav ul a[aria-current="page"] { color: var(--white); }
 .nav-toggle { border-color: #f1f6f5; color: #f1f6f5; }
-@media (max-width: 1270px) {
+@media (max-width: 960px) {
   .main-nav ul a { border-bottom-color: rgba(255, 255, 255, 0.18); }
 }
 
@@ -770,14 +770,21 @@ img, svg { max-width: 100%; height: auto; }
 .header-hulp:hover { background: rgba(255, 255, 255, 0.12); color: var(--white); border-color: var(--white); }
 .header-hulp[aria-current="page"] { background: rgba(255, 255, 255, 0.14); border-color: var(--white); }
 .main-nav { gap: 0.9rem; }
-@media (max-width: 1270px) {
+@media (max-width: 960px) {
   .header-hulp { justify-content: center; }
 }
 /* Header iets breder, zodat de extra knop naast het logo past */
 .site-header .container { max-width: 1340px; }
-@media (min-width: 1271px) {
+@media (min-width: 961px) {
   .main-nav { gap: 0.6rem; }
   .main-nav ul { gap: 0.1rem; }
   .main-nav ul a { padding: 0.5rem 0.5rem; }
   .header-hulp, .main-nav .btn-primary { padding: 0.55rem 0.9rem; }
+}
+/* "Handige hulp voor de achterblijvers" op een eigen regel onder het menu */
+@media (min-width: 961px) {
+  .main-nav { display: grid; grid-template-columns: auto auto; align-items: center; justify-items: end; column-gap: 0.6rem; row-gap: 0.55rem; }
+  .main-nav ul { grid-column: 1; grid-row: 1; }
+  .main-nav .btn-primary { grid-column: 2; grid-row: 1; }
+  .header-hulp { grid-column: 1 / -1; grid-row: 2; }
 }
