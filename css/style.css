@@ -758,3 +758,9 @@ img, svg { max-width: 100%; height: auto; }
 .ervaring figcaption { margin-top: 1.4rem; padding-top: 1rem; border-top: 1px solid var(--sand-dark); }
 .ervaring figcaption strong { display: block; font-family: var(--font-head); font-size: 1.15rem; color: var(--petrol-dark); }
 .ervaring figcaption span { color: var(--ink-soft); font-size: .97rem; }
+
+/* Pagina Voor mijn nabestaanden */
+.schermvoorbeeld { margin: 0; }
+.schermvoorbeeld img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--sand-dark); box-shadow: var(--shadow); }
+.schermvoorbeeld figcaption { margin-top: .5rem; font-size: .9rem; color: var(--ink-soft); text-align: center; }
+.split > div > h2:first-child { margin-top: 0; }
