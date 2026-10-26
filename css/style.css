@@ -235,7 +235,7 @@ img, svg { max-width: 100%; height: auto; }
 .nav-toggle-bars::before { position: absolute; top: -6px; }
 .nav-toggle-bars::after { position: absolute; top: 6px; }
 
-@media (max-width: 960px) {
+@media (max-width: 1270px) {
   .js .nav-toggle { display: inline-flex; }
   .js .main-nav { display: none; }
   .js .main-nav.is-open { display: flex; }
@@ -726,7 +726,7 @@ img, svg { max-width: 100%; height: auto; }
 .main-nav ul a:hover { background: rgba(255, 255, 255, 0.12); color: var(--white); }
 .main-nav ul a[aria-current="page"] { color: var(--white); }
 .nav-toggle { border-color: #f1f6f5; color: #f1f6f5; }
-@media (max-width: 1100px) {
+@media (max-width: 1270px) {
   .main-nav ul a { border-bottom-color: rgba(255, 255, 255, 0.18); }
 }
 
@@ -764,3 +764,20 @@ img, svg { max-width: 100%; height: auto; }
 .schermvoorbeeld img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--sand-dark); box-shadow: var(--shadow); }
 .schermvoorbeeld figcaption { margin-top: .5rem; font-size: .9rem; color: var(--ink-soft); text-align: center; }
 .split > div > h2:first-child { margin-top: 0; }
+
+/* Extra knop in de header: Handige hulp voor de achterblijvers */
+.header-hulp { border: 2px solid rgba(241, 246, 245, 0.75); color: #f1f6f5; background: transparent; }
+.header-hulp:hover { background: rgba(255, 255, 255, 0.12); color: var(--white); border-color: var(--white); }
+.header-hulp[aria-current="page"] { background: rgba(255, 255, 255, 0.14); border-color: var(--white); }
+.main-nav { gap: 0.9rem; }
+@media (max-width: 1270px) {
+  .header-hulp { justify-content: center; }
+}
+/* Header iets breder, zodat de extra knop naast het logo past */
+.site-header .container { max-width: 1340px; }
+@media (min-width: 1271px) {
+  .main-nav { gap: 0.6rem; }
+  .main-nav ul { gap: 0.1rem; }
+  .main-nav ul a { padding: 0.5rem 0.5rem; }
+  .header-hulp, .main-nav .btn-primary { padding: 0.55rem 0.9rem; }
+}
