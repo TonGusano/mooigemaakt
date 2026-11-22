@@ -455,6 +455,19 @@ img, svg { max-width: 100%; height: auto; }
   .bladerboek-teller { min-width: 0; font-size: 0.9rem; }
 }
 .bladerboek-download { margin-top: 1rem; }
+.bladerboek .stf__wrapper { margin-inline: auto; }
+.bladerboek-groot { margin: 0.9rem 0 0; }
+.bladerboek-groot[hidden] { display: none; }
+/* Schermvullend: het boek vult het hele venster (ook op een iPhone, waar echt volledig scherm niet kan) */
+.bladerboek.is-schermvullend {
+  position: fixed; inset: 0; z-index: 1000; max-width: none; margin: 0;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 3.2rem 1rem 1rem; background: #1d3437; overflow: hidden;
+}
+.bladerboek.is-schermvullend .bladerboek-teller { color: #e8eeee; }
+.bladerboek.is-schermvullend .bladerboek-download { display: none; }
+.bladerboek.is-schermvullend .bladerboek-groot { position: absolute; top: 0.6rem; right: 0.8rem; margin: 0; }
+html.bladerboek-open { overflow: hidden; }
 
 .placeholder .icon { width: 3rem; height: 3rem; opacity: 0.75; }
 .placeholder p { margin: 0; max-width: 24em; font-size: 0.97rem; }

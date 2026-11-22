@@ -40,6 +40,61 @@
     knoppen.querySelector('[data-blader="volgende"]').addEventListener('click', function () { flip.flipNext(); });
     knoppen.hidden = false;
     toonTeller();
+
+    // ---------- Schermvullend bekijken ----------
+    var blok = boek.closest('.bladerboek');
+    var groot = blok.querySelector('.bladerboek-groot');
+    var grootKnop = groot.querySelector('button');
+    var instelling = flip.getSettings();
+    var normaal = { maxWidth: instelling.maxWidth, maxHeight: instelling.maxHeight };
+    var verhouding = 1274 / 900; // hoogte gedeeld door breedte van een pagina
+    var open = false;
+
+    // Bereken hoe groot een pagina mag zijn zodat het boek precies in het venster past
+    function pasGrootteAan() {
+      var omhulsel = boek; // page-flip zet de maximale breedte op het boekblok zelf
+      if (!open) {
+        instelling.maxWidth = normaal.maxWidth;
+        instelling.maxHeight = normaal.maxHeight;
+        omhulsel.style.maxWidth = (2 * normaal.maxWidth) + 'px';
+      } else {
+        var ruimteB = blok.clientWidth - 32;
+        var ruimteH = window.innerHeight - knoppen.offsetHeight - 110;
+        var staand = ruimteB < 2 * instelling.minWidth;
+        var breedte = Math.max(instelling.minWidth, Math.min(staand ? ruimteB : ruimteB / 2, ruimteH / verhouding));
+        instelling.maxWidth = breedte;
+        instelling.maxHeight = breedte * verhouding;
+        omhulsel.style.maxWidth = ((staand ? 1 : 2) * breedte) + 'px';
+      }
+      flip.update();
+    }
+
+    function zetSchermvullend(aan) {
+      if (open === aan) return;
+      open = aan;
+      blok.classList.toggle('is-schermvullend', aan);
+      document.documentElement.classList.toggle('bladerboek-open', aan);
+      grootKnop.textContent = aan ? '✕ Sluiten' : '⤢ Schermvullend bekijken';
+      grootKnop.setAttribute('aria-pressed', String(aan));
+      if (aan && blok.requestFullscreen) blok.requestFullscreen().catch(function () {});
+      if (!aan && document.fullscreenElement) document.exitFullscreen().catch(function () {});
+      requestAnimationFrame(pasGrootteAan);
+      if (!aan) blok.scrollIntoView({ block: 'center' });
+    }
+
+    grootKnop.addEventListener('click', function () { zetSchermvullend(!open); });
+    document.addEventListener('fullscreenchange', function () {
+      if (!document.fullscreenElement && open) zetSchermvullend(false);
+      else if (open) requestAnimationFrame(pasGrootteAan);
+    });
+    window.addEventListener('resize', function () { if (open) pasGrootteAan(); });
+    document.addEventListener('keydown', function (e) {
+      if (!open) return;
+      if (e.key === 'Escape') zetSchermvullend(false);
+      else if (e.key === 'ArrowRight') flip.flipNext();
+      else if (e.key === 'ArrowLeft') flip.flipPrev();
+    });
+    groot.hidden = false;
   }
 
   if ('IntersectionObserver' in window) {
