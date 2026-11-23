@@ -870,3 +870,13 @@ html.bladerboek-open { overflow: hidden; }
 @media (min-width: 961px) {
   .header-extra { padding-left: 0.5rem; }
 }
+
+/* "EHBO" tussen het kruis en de knop, dicht bij het kruis */
+.header-extra-ehbo {
+  font-family: var(--font-head); font-weight: 700; font-size: 1.5rem;
+  letter-spacing: 0.12em; color: var(--white); white-space: nowrap;
+  margin-left: -0.6rem;
+}
+@media (max-width: 960px) {
+  .header-extra-ehbo { font-size: 1.1rem; margin-left: -0.4rem; }
+}
