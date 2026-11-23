@@ -865,3 +865,8 @@ html.bladerboek-open { overflow: hidden; }
   .hulp-videokop { grid-area: videokop; padding-top: 2.4rem; }
   .hulp-video .video-frame { grid-area: videoframe; }
 }
+
+/* "Extra service:" begint precies onder de tekst "Wat ik maak" (menulinks hebben 0.5rem binnenruimte) */
+@media (min-width: 961px) {
+  .header-extra { padding-left: 0.5rem; }
+}
