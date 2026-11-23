@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261122c">
+  <link rel="stylesheet" href="css/style.css?v=20261123">
 </head>
 <body>
   <a class="skip-link" href="#inhoud">Direct naar de inhoud</a>
@@ -53,19 +53,13 @@
   </header>
 
   <main id="inhoud">
-    <section class="page-hero">
-      <div class="container split">
-        <div>
-          <span class="eyebrow">Dé handige hulp voor nabestaanden</span>
-          <h1>Een zorg minder voor wie u liefheeft</h1>
-          <p class="lead">Leg veilig vast wat uw nabestaanden later moeten weten: van contacten en bankzaken tot uw uitvaartwensen.</p>
-          <p>Na een overlijden moeten nabestaanden veel regelen, vaak in korte tijd en midden in hun verdriet. Wie moeten ze bellen? Bij welke bank staat de rekening? Welke abonnementen lopen er nog? Waar ligt het testament? En wat waren uw wensen voor de uitvaart?</p>
-          <p>Met <strong>‘dé handige hulp voor nabestaanden’</strong> legt u dat allemaal vast, op één plek, overzichtelijk en goed beveiligd.</p>
-        </div>
-        <figure class="schermvoorbeeld">
-          <img src="images/nabestaanden-voorbeeld.jpg" alt="Voorbeeld van het overzicht, met tabbladen voor eerste stappen, geld, abonnementen, uitvaartwensen en meer" width="800" height="620">
-          <figcaption>Voorbeeld met verzonnen gegevens</figcaption>
-        </figure>
+    <section class="page-hero hulp-hero">
+      <div class="container">
+        <span class="eyebrow">Dé handige hulp voor nabestaanden</span>
+        <h1>Een zorg minder voor wie u liefheeft</h1>
+        <p class="lead">Leg veilig vast wat uw nabestaanden later moeten weten: van contacten en bankzaken tot uw uitvaartwensen.</p>
+        <p>Na een overlijden moeten nabestaanden veel regelen, vaak in korte tijd en midden in hun verdriet. Wie moeten ze bellen? Bij welke bank staat de rekening? Welke abonnementen lopen er nog? Waar ligt het testament? En wat waren uw wensen voor de uitvaart?</p>
+        <p>Met <strong>‘dé handige hulp voor nabestaanden’</strong> legt u dat allemaal vast, op één plek, overzichtelijk en goed beveiligd.</p>
       </div>
     </section>
 
@@ -75,32 +69,35 @@
           <h2 id="inhoud-titel">Wat legt u vast?</h2>
           <p>Een persoonlijk overzicht dat u op uw eigen computer bijhoudt. U opent het gewoon in uw internetbrowser en vult het stap voor stap in.</p>
         </div>
-        <div class="grid grid--4">
-          <div class="card card--plain"><h3>Eerste stappen</h3><p>Wat uw nabestaanden direct moeten doen, in de juiste volgorde.</p></div>
-          <div class="card card--plain"><h3>Contacten</h3><p>Huisarts, notaris, uitvaartondernemer, familie en vrienden.</p></div>
-          <div class="card card--plain"><h3>Geld en verzekeringen</h3><p>Banken, pensioen, hypotheek, verzekeringen en wat ermee moet gebeuren.</p></div>
-          <div class="card card--plain"><h3>Abonnementen</h3><p>Van energie en internet tot streamingdiensten, met hoe u ze opzegt.</p></div>
-          <div class="card card--plain"><h3>Uitvaartwensen</h3><p>Zodat niemand hoeft te raden wat u had gewild.</p></div>
-          <div class="card card--plain"><h3>Accounts en wachtwoorden</h3><p>E-mail, DigiD, sociale media en wat ermee moet gebeuren.</p></div>
-          <div class="card card--plain"><h3>Belangrijke papieren</h3><p>Waar ligt wat, eventueel met een foto erbij.</p></div>
-          <div class="card card--plain"><h3>Een persoonlijk bericht</h3><p>Een paar woorden aan wie achterblijft.</p></div>
+        <div class="hulp-overzicht">
+          <div class="hulp-kaarten">
+            <div class="card card--plain"><h3>Eerste stappen</h3><p>Wat uw nabestaanden direct moeten doen, in de juiste volgorde.</p></div>
+            <div class="card card--plain"><h3>Contacten</h3><p>Huisarts, notaris, uitvaartondernemer, familie en vrienden.</p></div>
+            <div class="card card--plain"><h3>Uitvaartwensen</h3><p>Zodat niemand hoeft te raden wat u had gewild.</p></div>
+            <div class="card card--plain"><h3>Accounts en wachtwoorden</h3><p>E-mail, DigiD, sociale media en wat ermee moet gebeuren.</p></div>
+            <div class="card card--plain"><h3>Geld en verzekeringen</h3><p>Banken, pensioen, hypotheek, verzekeringen en wat ermee moet gebeuren.</p></div>
+            <div class="card card--plain"><h3>Abonnementen</h3><p>Van energie en internet tot streamingdiensten, met hoe u ze opzegt.</p></div>
+            <div class="card card--plain"><h3>Gebruikersnamen en wachtwoorden</h3><p>Een overzichtelijke tabel met al uw inloggegevens, ook in te lezen uit Excel.</p></div>
+            <div class="card card--plain"><h3>Een persoonlijk bericht</h3><p>Een paar woorden aan wie achterblijft.</p></div>
+          </div>
+          <div class="hulp-rechts">
+            <figure class="schermvoorbeeld">
+              <img src="images/nabestaanden-voorbeeld.jpg?v=2" alt="Voorbeeld van het overzicht van Jan Voorbeeld, met tabbladen voor eerste stappen, geld, abonnementen, uitvaartwensen, gebruikersnamen en wachtwoorden en meer" width="800" height="660">
+              <figcaption>Voorbeeld met verzonnen gegevens</figcaption>
+            </figure>
+            <div class="hulp-video">
+              <h2 id="video-titel">Zo werkt het</h2>
+              <p>In deze korte uitlegvideo ziet u stap voor stap hoe u het overzicht invult en opslaat.</p>
+              <div class="video-frame">
+                <iframe src="https://player.vimeo.com/video/1239799852?dnt=1" title="Uitlegvideo: zo vult u ‘dé handige hulp voor nabestaanden’ in" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="video-titel">
-      <div class="container container--narrow">
-        <div class="section-head">
-          <h2 id="video-titel">Zo werkt het</h2>
-          <p>In deze korte uitlegvideo ziet u stap voor stap hoe u het overzicht invult en opslaat.</p>
-        </div>
-        <div class="video-frame">
-          <iframe src="https://player.vimeo.com/video/1239799852?dnt=1" title="Uitlegvideo: zo vult u ‘dé handige hulp voor nabestaanden’ in" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--white" aria-labelledby="boekje-titel">
+    <section class="section" aria-labelledby="boekje-titel">
       <div class="container">
         <div class="section-head">
           <h2 id="boekje-titel">Blader door de handleiding</h2>
