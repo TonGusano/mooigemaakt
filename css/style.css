@@ -852,14 +852,26 @@ html.bladerboek-open { overflow: hidden; }
 
 /* Pagina handige hulp: tekst over de volle breedte, blokjes met voorbeeld en video ernaast */
 .hulp-hero .lead, .hulp-hero p { max-width: none; }
-.hulp-overzicht { display: grid; gap: 2.4rem; align-items: start; }
+.hulp-overzicht { display: grid; gap: 1rem; align-items: start; }
 .hulp-kaarten { display: grid; grid-template-columns: 1fr; gap: 1rem; }
 .hulp-kaarten .card h3 { hyphens: auto; }
-.hulp-rechts { display: flex; flex-direction: column; gap: 2.4rem; }
+.hulp-voorbeeld { margin-top: 1.4rem; }
+.hulp-video { margin-top: 1.4rem; }
 .hulp-video h2 { margin-top: 0; }
 @media (min-width: 560px) {
   .hulp-kaarten { grid-template-columns: 1fr 1fr; }
 }
+/* computer: blokjes 1-4 naast het voorbeeld, blokjes 5-8 op gelijke hoogte met de video */
 @media (min-width: 980px) {
-  .hulp-overzicht { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; }
+  .hulp-overzicht {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas: "boven voorbeeld" ". videokop" "onder videoframe";
+    column-gap: 3rem; row-gap: 0;
+  }
+  .hulp-kaarten--boven { grid-area: boven; }
+  .hulp-kaarten--onder { grid-area: onder; }
+  .hulp-voorbeeld { grid-area: voorbeeld; margin-top: 0; }
+  .hulp-video { display: contents; }
+  .hulp-videokop { grid-area: videokop; padding-top: 2.4rem; }
+  .hulp-video .video-frame { grid-area: videoframe; }
 }
